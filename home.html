@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO META TAGS - PERSONALIZAR AQUÍ -->
+    <title>AR Events Colombia - Realidad Aumentada para Eventos en Bogotá</title>
+    <meta name="description" content="Transformamos eventos en Bogotá con Realidad Aumentada, productos personalizados y tecnología de automatización. Experiencias únicas e inolvidables.">
+    <meta name="keywords" content="realidad aumentada, eventos bogotá, AR eventos, productos personalizados, automatización eventos, tecnología eventos">
+    <meta name="Reality" content="Reality">
+    
+    <!-- OPEN GRAPH - REDES SOCIALES -->
+    <meta property="og:title" content="Reality - Realidad Aumentada para Eventos">
+    <meta property="og:description" content="Revoluciona tus eventos con tecnología AR, luces automatizadas y experiencias inmersivas">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tudominio.com">
+    <!-- CAMBIAR POR TU IMAGEN: -->
+    <meta property="og:image" content="./img/logo_reality_fondo_blanco.png">
+    
+    <!-- FAVICON - PERSONALIZAR -->
+    <link rel="icon" type="image/x-icon" href="./img/logo_reality_fondo_blanco.png">
+
+    
+    <!-- ARCHIVOS CSS Y JS -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="ar-events.js"></script>
+    
+    <!-- ANIME.JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+    <!-- FONDO DINÁMICO -->
+    <div class="dynamic-background"></div>
+    
+    <!-- LÍNEAS DE LUZ ANIMADAS -->
+    <div class="light-lines" id="lightLines"></div>
+    
+    <!-- NAVEGACIÓN DESKTOP (FIJA IZQUIERDA) -->
+    <nav class="navigation" id="desktopNav">
+        <div class="nav-item active" data-page="inicio" data-color="var(--electric-purple)">
+            Inicio
+        </div>
+        <div class="nav-item" data-page="contactanos" data-color="var(--contact-yellow)">
+            Contáctanos
+        </div>
+        <div class="nav-item" data-page="historia" data-color="var(--cyber-orange)">
+            Historia
+        </div>
+        <div class="nav-item" data-page="descubre-ar" data-color="var(--tech-pink)">
+            Descubre AR
+        </div>
+        <div class="nav-item" data-page="servicios" data-color="var(--neon-green)">
+            Servicios
+        </div>
+    </nav>
+    
+    <!-- MENÚ HAMBURGUESA MÓVIL -->
+    <div class="mobile-menu-toggle" id="mobileMenuToggle">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    
+    <!-- MENÚ MÓVIL DESPLEGABLE -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-nav-item active" data-page="inicio" data-color="var(--electric-purple)">
+            Inicio
+        </div>
+        <div class="mobile-nav-item" data-page="contactanos" data-color="var(--contact-yellow)">
+            Contáctanos
+        </div>
+        <div class="mobile-nav-item" data-page="historia" data-color="var(--cyber-orange)">
+            Historia
+        </div>
+        <div class="mobile-nav-item" data-page="descubre-ar" data-color="var(--tech-pink)">
+            Descubre AR
+        </div>
+        <div class="mobile-nav-item" data-page="servicios" data-color="var(--neon-green)">
+            Servicios
+        </div>
+    </div>
+    
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="main-container">
+        
+        <!-- ==========================================
+             PÁGINA INICIO
+        ========================================== -->
+        <section class="page active" id="inicio">
+            <div class="hero-section">
+                <!-- LOGO CENTRADO - PERSONALIZAR AQUÍ -->
+                <div class="logo">
+                    <img src="./img/logo_reality_fondo_blanco.png" alt="Logo de reality">
+                </div>
+                
+                <h1 class="hero-title">
+                    Revoluciona tus Eventos
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Creamos experiencias únicas con Realidad Aumentada, productos personalizados y tecnología de automatización para eventos inolvidables en Bogotá
+                </p>
+                
+                <div class="scroll-indicator">
+                    ↓ Desliza para descubrir más
+                </div>
+            </div>
+            
+            <!-- GALERÍA DE IMÁGENES AR -->
+            <div class="ar-gallery">
+                <h2 class="gallery-title">Nuestras Creaciones AR</h2>
+                <div class="gallery-grid">
+                    <!-- TARJETA 1 - PERSONALIZAR IMAGEN -->
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            <!-- REEMPLAZAR CON: <img src="ruta/imagen1.jpg" alt="Descripción"> -->
+                            📱 Productos AR
+                        </div>
+                        <h3 class="image-title">Productos Personalizados</h3>
+                    </div>
+                    
+                    <!-- TARJETA 2 - PERSONALIZAR IMAGEN -->
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            <!-- REEMPLAZAR CON: <img src="ruta/imagen2.jpg" alt="Descripción"> -->
+                            💡 Luces Inteligentes
+                        </div>
+                        <h3 class="image-title">Automatización de Luces</h3>
+                    </div>
+                    
+                    <!-- TARJETA 3 - PERSONALIZAR IMAGEN -->
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            <!-- REEMPLAZAR CON: <img src="ruta/imagen3.jpg" alt="Descripción"> -->
+                            🎵 Audio Inmersivo
+                        </div>
+                        <h3 class="image-title">Experiencias Sonoras</h3>
+                    </div>
+                    
+                    <!-- TARJETA 4 - PERSONALIZAR IMAGEN -->
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            <!-- REEMPLAZAR CON: <img src="ruta/imagen4.jpg" alt="Descripción"> -->
+                            🌟 Visualizaciones
+                        </div>
+                        <h3 class="image-title">Efectos Visuales</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ==========================================
+             PÁGINA CONTÁCTANOS
+        ========================================== -->
+        <section class="page" id="contactanos">
+            <div class="contact-section">
+                <div class="logo">
+                    <img src="./img/logo_reality_fondo_blanco.png" alt="Logo de Reality">
+                </div>
+
+                <h1 class="contact-title">¿Listo para Transformar tu Evento?</h1>
+                
+                <p class="contact-description">
+                    Llevemos tu evento al siguiente nivel. Con nuestra tecnología AR y automatización, 
+                    crearemos una experiencia que tus invitados jamás olvidarán. 
+                    ¡Hablemos ahora y hagamos realidad lo imposible!
+                </p>
+                
+                <!-- BOTÓN WHATSAPP - PERSONALIZAR NÚMERO -->
+                <a href="https://wa.me/573173020116?text=¡Hola!%20Quiero%20transformar%20mi%20evento%20con%20Realidad%20Aumentada.%20¿Pueden%20ayudarme?" 
+                   class="whatsapp-button" 
+                   target="_blank">
+                    📱 Escríbenos por WhatsApp
+                </a>
+                
+                <p style="margin-top: var(--space-lg); color: var(--text-secondary); font-size: var(--text-sm);">
+                    Respuesta inmediata • Asesoría gratuita • Presupuesto personalizado
+                </p>
+            </div>
+        </section>
+        
+        <!-- ==========================================
+             PÁGINA HISTORIA
+        ========================================== -->
+        <section class="page" id="historia">
+            <div class="page-content">
+                <div class="logo">
+                    <img src="./img/logo_reality_fondo_blanco.png" alt="Logo de reality">
+                </div>
+
+                <h1 class="page-title">Nuestra Historia</h1>
+                
+                <p class="page-text">
+                    <!-- PERSONALIZAR CONTENIDO AQUÍ -->
+                    Nacimos de la visión de revolucionar la industria de eventos en Colombia. 
+                    Vimos la oportunidad de combinar la tecnología de Realidad Aumentada con 
+                    la pasión bogotana por celebrar y crear momentos únicos.
+                </p>
+                
+                <p class="page-text">
+                    Desde nuestros inicios, hemos trabajado incansablemente para desarrollar 
+                    productos personalizados que no solo impresionen, sino que conecten 
+                    emocionalmente con cada asistente.
+                </p>
+                
+                <p class="page-text">
+                    Hoy somos pioneros en automatización de eventos, ofreciendo experiencias 
+                    que transforman cualquier celebración en un recuerdo inolvidable.
+                </p>
+            </div>
+        </section>
+        
+        <!-- ==========================================
+             PÁGINA DESCUBRE AR
+        ========================================== -->
+        <section class="page" id="descubre-ar">
+            <div class="page-content">
+
+                <div class="logo">
+                    <img src="./img/logo_reality_fondo_blanco.png" alt="Logo de reality">
+                </div>
+
+                <h1 class="page-title">Descubre la Realidad Aumentada</h1>
+                
+                <p class="page-text">
+                    <!-- PERSONALIZAR CONTENIDO AQUÍ -->
+                    La Realidad Aumentada es el futuro de los eventos. Imagina productos 
+                    que cobran vida ante los ojos de tus invitados, creando interacciones 
+                    mágicas que trascienden lo físico.
+                </p>
+                
+                <p class="page-text">
+                    Nuestros productos AR personalizados incluyen tarjetas de invitación 
+                    interactivas, decoraciones que se transforman, y experiencias inmersivas 
+                    que hacen que cada evento sea único e irrepetible.
+                </p>
+                
+                <p class="page-text">
+                    Con nuestra tecnología, tus eventos no solo se viven, se experimentan 
+                    en una dimensión completamente nueva.
+                </p>
+            </div>
+        </section>
+        
+        <!-- ==========================================
+             PÁGINA SERVICIOS
+        ========================================== -->
+        <section class="page" id="servicios">
+            <div class="page-content">
+
+                <div class="logo">
+                    <img src="./img/logo_reality_fondo_blanco.png" alt="Logo de reality">
+                </div>
+
+                <h1 class="page-title">Nuestros Servicios</h1>
+                
+                <p class="page-text">
+                    <!-- PERSONALIZAR CONTENIDO AQUÍ -->
+                    <strong>🎯 Productos AR Personalizados:</strong><br>
+                    Invitaciones interactivas, souvenirs aumentados, decoraciones mágicas.
+                </p>
+                
+                <p class="page-text">
+                    <strong>💡 Automatización de Luces:</strong><br>
+                    Sistemas inteligentes que sincronizan iluminación con música y momentos clave.
+                </p>
+                
+                <p class="page-text">
+                    <strong>🎵 Experiencias Sonoras:</strong><br>
+                    Audio espacial inmersivo que envuelve a tus invitados en cada rincón.
+                </p>
+                
+                <p class="page-text">
+                    <strong>📱 Gestión Integral:</strong><br>
+                    Desde la conceptualización hasta la ejecución, manejamos cada detalle tecnológico.
+                </p>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- CARGAR JAVASCRIPT -->
+    <script src="script.js"></script>
+    
+    <!-- 
+    ==========================================
+    NOTAS IMPORTANTES PARA PERSONALIZACIÓN:
+    ==========================================
+    
+    1. SEO - PERSONALIZAR:
+       - Cambiar meta tags en <head>
+       - Actualizar datos estructurados en SEOManager
+       - Agregar Google Analytics/Facebook Pixel en trackPageViews()
+       - Cambiar URLs de Open Graph
+    
+    2. IMÁGENES - REEMPLAZAR:
+       - Cambiar .image-placeholder por <img> reales
+       - Agregar atributo data-src para lazy loading
+       - Optimizar imágenes para web (WebP recomendado)
+    
+    3. CONTACTO - PERSONALIZAR:
+       - Cambiar número de WhatsApp en href
+       - Personalizar mensaje de WhatsApp
+       - Agregar más métodos de contacto si es necesario
+    
+    4. COLORES - MODIFICAR:
+       - Cambiar variables CSS en :root
+       - Actualizar CONFIG.colors en JavaScript
+       - Ajustar gradientes según marca
+    
+    5. CONTENIDO - COMPLETAR:
+       - Escribir textos reales en todas las páginas
+       - Agregar más secciones si es necesario
+       - Incluir testimonios, portafolio, etc.
+    
+    6. PERFORMANCE - OPTIMIZAR:
+       - Comprimir imágenes
+       - Minificar CSS/JS para producción
+       - Configurar CDN si es necesario
+    
+    7. ANALYTICS - INTEGRAR:
+       - Google Analytics 4
+       - Facebook Pixel
+       - Hotjar o similar para heatmaps
+    
+    ==========================================
+    -->
+    <!-- ==========================================
+         FOOTER
+    ========================================== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">
+                © 2025 Reality. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
