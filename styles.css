@@ -392,6 +392,11 @@ body {
     margin-bottom: var(--space-md);
 }
 
+.image-placeholder img{
+    width: 100%;
+    margin: 0 auto;
+}
+
 .image-title {
     font-size: var(--text-lg);
     font-weight: 600;
