@@ -512,7 +512,7 @@ function addDynamicStyles() {
         /* Optimizaciones móviles */
         .mobile-optimized * {
             animation-duration: 0.5s !important;
-            transition-duration: 0.3s !important;
+            transition-duration: 3s !important;
         }
         
         /* Estados de carga */
