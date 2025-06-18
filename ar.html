@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles_ar.css">
+    <link rel="icon" type="image/x-icon" href="./img/logo_reality_fondo_blanco.png">
+    <script src="ar-events.js"></script>
+
+    <!-- ANIME.JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <title>Realidad Aumentada - Reality Studio - Realidad Aumentada para Eventos en Bogotá</title>
+</head>
+<body>
+    <!-- FONDO DINÁMICO -->
+    <div class="dynamic-background"></div>
+    
+    <!-- LÍNEAS DE LUZ ANIMADAS -->
+    <div class="light-lines" id="lightLines"></div>
+
+    <!-- NAVEGACIÓN DESKTOP (FIJA IZQUIERDA) -->
+    <nav class="navigation" id="desktopNav">
+        <a href="./index.html" style="text-decoration: none;">
+            <div class="nav-item active" data-page="inicio" data-color="var(--electric-purple)">
+            Inicio
+        </div>
+        </a>
+        <div class="nav-item" data-page="contactanos" data-color="var(--contact-yellow)">
+            Contáctanos
+        </div>
+        <div class="nav-item" data-page="historia" data-color="var(--cyber-orange)">
+            Historia
+        </div>
+        <div class="nav-item" data-page="descubre-ar" data-color="var(--tech-pink)">
+            Descubre AR
+        </div>
+        <div class="nav-item" data-page="servicios" data-color="var(--neon-green)">
+            Servicios
+        </div>
+    </nav>
+
+        <!-- MENÚ HAMBURGUESA MÓVIL -->
+    <div class="mobile-menu-toggle" id="mobileMenuToggle">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    
+    <!-- MENÚ MÓVIL DESPLEGABLE -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-nav-item active" data-page="inicio" data-color="var(--electric-purple)">
+            Inicio
+        </div>
+        <div class="mobile-nav-item" data-page="contactanos" data-color="var(--contact-yellow)">
+            Contáctanos
+        </div>
+        <div class="mobile-nav-item" data-page="historia" data-color="var(--cyber-orange)">
+            Historia
+        </div>
+        <div class="mobile-nav-item" data-page="descubre-ar" data-color="var(--tech-pink)">
+            Descubre AR
+        </div>
+        <div class="mobile-nav-item" data-page="servicios" data-color="var(--neon-green)">
+            Servicios
+        </div>
+    </div>
+    
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="main-container">
+
+            <section class="page active" id="inicio">
+            <div class="hero-section">
+                <!-- LOGO CENTRADO - PERSONALIZAR AQUÍ -->
+                <div class="logo">
+                    <img src="./img/logo_reality_fondo_blanco.png" alt="Logo de reality">
+                </div>
+                
+                <h1 class="hero-title">
+                    Realidad Aumentada
+                </h1>
+                
+                <p class="hero-subtitle">
+                    
+                </p>
+                
+                <div class="scroll-indicator">
+                    ↓ Desliza para descubrir más
+                </div>
+            </div>
+            
+            <!-- GALERÍA DE IMÁGENES AR -->
+            <div class="ar-gallery">
+                <h2 class="gallery-title">Las marcas cobran vida con Realidad Aumentada</h2>
+                <div class="gallery-grid">
+                    <!-- TARJETA 1 -->
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            <img src="./img/img_tracking.jpg" alt="Una mujer observando la realidad aumentada de un logo en una agenda">
+                        </div>
+                        <h2 class="image-title">Personaliza tus eventos con tecnología que impacta.
+</h2>
+                        <p class="image-text"> Crea experiencias únicas y recuerdos memorables para tus clientes usando Realidad
+                             Aumentada. Con esta herramienta innovadora, tu evento no solo se verá… será imposible de olvidar.</p>
+                    </div>
+                    
+                    <!-- TARJETA 2 -->
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            <img src="./img/corazon_ar.jpg" alt="Grupo de reflectores con luz, automatizados">                            
+                        </div>
+                        <h3 class="image-title">Aprender también puede ser una experiencia inmersiva.</h3>
+                        <p class="image-text">Integramos la Realidad Aumentada en entornos académicos y 
+                            didácticos para hacer del aprendizaje algo visual, interactivo y memorable. 
+                            Desde museos escolares hasta guías educativas y exposiciones, transformamos 
+                            contenidos tradicionales en experiencias que despiertan la curiosidad y potencian
+                             la comprensión.</p>
+                    </div>
+                    
+                    <!-- TARJETA 3 -->
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            <img src="./img/grupo_ar.jpg" alt="Efectos de sonido envolvente en un evento social">
+                        </div>
+                        <h3 class="image-title">Experiencias Inolvidables</h3>
+                        <p class="image-text">Hay momentos que se viven una sola vez. Haz que valgan la pena.
+                            Creamos experiencias con Realidad Aumentada que activan emociones, conectan con el 
+                            público y transforman instantes comunes en recuerdos inolvidables. Ideal para 
+                            marcas, artistas, bodas, lanzamientos o cualquier evento que quiera dejar huella.</p>
+                    </div>
+                    
+                    <!-- TARJETA 4 -->
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            <img src="./img/colibri.jpg" alt="Efectos visuales sobre una pared en un evento social">
+                        </div>
+                        <h3 class="image-title">Las imágenes cobran vida</h3>
+                        <p class="image-text">Aplicamos Realidad Aumentada a tus imágenes para convertirlas en contenido 
+                            interactivo. Flyers, tarjetas, empaques y afiches que, al escanearse, 
+                            muestran videos, animaciones, enlaces o mensajes en tiempo real. 
+                            Tecnología visual al servicio de tus eventos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>    
+    
+</body>
+</html>

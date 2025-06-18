@@ -1,0 +1,634 @@
+/* ==========================================
+   VARIABLES CSS - PERSONALIZACIÓN FÁCIL
+========================================== */
+:root {
+    /* COLORES PRINCIPALES */
+    --primary-blue: #007ACC;        /* Azul VS Code - Color del logo */
+    --electric-purple: #8B5FBF;     /* Para botón Inicio */
+    --neon-green: #aaff9b;          /* Para botón Servicios */
+    --cyber-orange: #FF6B35;        /* Para botón Historia */
+    --tech-pink: #FF1B8D;           /* Para botón Descubre AR */
+    --contact-yellow: #FFD23F;      /* Para botón Contactanos */
+    
+    /* COLORES DE SOPORTE */
+    --bg-dark: #0D1117;
+    --bg-card: rgba(255, 255, 255, 0.05);
+    --text-primary: #FFFFFF;
+    --text-secondary: #FFFFFF;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    
+    /* TIPOGRAFÍA */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-display: 'Space Grotesk', var(--font-primary);
+    
+    /* TAMAÑOS DE FUENTE */
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
+    --text-5xl: 3rem;
+    
+    /* ESPACIADO */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+    --space-3xl: 4rem;
+    
+    /* TRANSICIONES */
+    --transition-fast: 0.15s ease;
+    --transition-smooth: 0.3s ease;
+    --transition-slow: 0.6s ease;
+    
+    /* DIMENSIONES NAVEGACIÓN */
+    --nav-width: 180px;
+}
+
+/* ==========================================
+   IMPORTAR FUENTES MODERNAS
+========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+/* ==========================================
+   RESET Y BASE STYLES
+========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    background: var(--bg-dark);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    min-height: 100vh;
+    transition: background-color var(--transition-slow);
+}
+
+/* ==========================================
+   FONDO DINÁMICO ANIMADO
+========================================== */
+.dynamic-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background: linear-gradient(45deg, var(--primary-blue), var(--electric-purple));
+    background-size: 400% 400%;
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ==========================================
+   LÍNEAS DE LUZ ANIMADAS (PROFUNDIDAD)
+========================================== */
+.light-lines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.light-line {
+    position: absolute;
+    width: 2px;
+    height: 200px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.4), transparent);
+    opacity: 0;
+}
+
+/* ==========================================
+   NAVEGACIÓN FIJA (DESKTOP)
+========================================== */
+.navigation {
+    position: fixed;
+    left: var(--space-xl);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    width: var(--nav-width);
+}
+
+.nav-item {
+    position: relative;
+    cursor: pointer;
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: all var(--transition-smooth);
+    padding: var(--space-md);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    min-width: 140px;
+    text-align: center;
+}
+
+.nav-item:hover {
+    transform: scale(1.1);
+    color: var(--text-primary);
+    background: var(--glass-bg);
+    box-shadow: 0 8px 32px rgba(0, 122, 204, 0.3);
+}
+
+.nav-item.active {
+    color: var(--text-primary);
+    transform: scale(1.05);
+}
+
+/* ==========================================
+   MENÚ HAMBURGUESA (MOBILE)
+========================================== */
+.mobile-menu-toggle {
+    display: none;
+    position: fixed;
+    top: var(--space-xl);
+    left: var(--space-xl);
+    z-index: 2000;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: var(--space-md);
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+}
+
+.hamburger {
+    width: 24px;
+    height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 2px;
+    background: var(--text-primary);
+    transition: all var(--transition-smooth);
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-dark);
+    z-index: 1500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-xl);
+    transform: translateX(-100%);
+    transition: all var(--transition-smooth);
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+.mobile-nav-item {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-smooth);
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.mobile-nav-item:hover,
+.mobile-nav-item.active {
+    color: var(--text-primary);
+    transform: translateY(0) scale(1.1);
+}
+
+/* ==========================================
+   CONTENEDOR PRINCIPAL - CORREGIDO
+========================================== */
+.main-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* CLAVE: Agregar margen izquierdo en desktop para evitar superposición */
+    margin-left: calc(var(--nav-width) + var(--space-xl) * 2);
+}
+
+/* ==========================================
+   PÁGINA DE INICIO
+========================================== */
+.page {
+    display: none;
+    min-height: 100vh;
+    padding: var(--space-xl);
+    position: relative;
+}
+
+.page.active {
+    display: block;
+
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    position: relative;
+}
+
+/* LOGO CENTRADO */
+.logo img{
+    width: 180px;
+    height: 180px;
+    /*background: var(--primary-blue);*/
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: white;
+    margin-bottom: var(--space-xl);*/
+    box-shadow: 0 20px 40px rgba(0, 122, 204, 0.3);
+    transition: all var(--transition-smooth);
+}
+
+.logo:hover {
+    transform: scale(1.05) rotateY(10deg);
+    border-radius: 50%;
+    box-shadow: 0 0 21px rgba(227, 247, 92, 0.5);
+    
+}
+
+.hero-title {
+    font-family: var(--font-display);
+    font-size: var(--text-5xl);
+    font-weight: 1000;
+    margin-top: var(--space-3xl);
+    margin-bottom: var(--space-lg);
+    background: linear-gradient(135deg, var(--text-primary), var(--text-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: var(--text-xl);
+    color: var(--contact-yellow);
+    margin-bottom: var(--space-2xl);
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: var(--space-xl);
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--text-primary);
+    font-size: var(--text-sm);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+    40% { transform: translateX(-50%) translateY(-10px); }
+    60% { transform: translateX(-50%) translateY(-5px); }
+}
+
+/* ==========================================
+   GALERÍA DE IMÁGENES AR
+========================================== */
+.ar-gallery {
+    padding: var(--space-3xl) 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-title {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+    color: var(--text-primary);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+    padding: 0 var(--space-lg);
+}
+
+/* TARJETAS DE IMAGEN - PERSONALIZAR AQUÍ TUS IMÁGENES */
+.image-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 0;
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-smooth);
+    cursor: pointer;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.image-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 122, 204, 0.2);
+}
+
+/* PLACEHOLDER PARA IMÁGENES - REEMPLAZAR CON TUS IMÁGENES REALES */
+.image-card img{
+    
+    width: 90%;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    font-size: var(--text-lg);
+    font-weight: 600;
+    margin-bottom: 0;
+    max-width: 510px;
+}
+
+.image-placeholder img{
+    margin: 0 auto;
+}
+
+.image-title {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 10px 0 10px 0;
+}
+.image-text {
+    margin: 21px;
+}
+
+/* ==========================================
+   PÁGINA DE CONTACTO
+========================================== */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: var(--space-xl);
+}
+
+.contact-title {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    margin-top: var(--space-3xl);
+    margin-bottom: var(--space-lg);
+    color: var(--text-primary);
+}
+
+.contact-description {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-2xl);
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.whatsapp-button {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: white;
+    padding: var(--space-lg) var(--space-2xl);
+    border: none;
+    border-radius: 50px;
+    font-size: var(--text-lg);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-smooth);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-md);
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
+}
+
+/* ==========================================
+   PÁGINAS INTERNAS BÁSICAS
+========================================== */
+.page{
+    margin: 0 auto;
+}
+
+.page-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--space-3xl) var(--space-lg);
+    line-height: 1.8;
+    display: inline-flex;
+    align-content: first baseline;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+    
+
+.page-title {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    margin-bottom: var(--space-xl);
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.page-text {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-lg);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN - MOBILE FIRST
+========================================== */
+@media (max-width: 768px) {
+    :root {
+        --text-5xl: 2.5rem;
+        --text-4xl: 2rem;
+        --text-3xl: 1.75rem;
+        --space-xl: 1rem;
+        --space-2xl: 2rem;
+        --space-3xl: 3rem;
+    }
+    
+    /* CLAVE: Quitar margen izquierdo en móvil */
+    .main-container {
+        margin-left: 0;
+        align-content: center;
+    }
+
+    /* Ocultar navegación desktop */
+    .navigation {
+        display: none;
+    }
+    
+    /* Mostrar menú móvil */
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    /* Ajustar hero section */
+    .hero-section {
+        padding: var(--space-xl);
+        align-items: center;
+    }
+    
+    .logo img{
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero-title {
+        font-size: var(--text-3xl);
+        margin-top: 51px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+        padding: 0;
+    }
+    
+    .image-card {
+        height: 500px;
+        padding: 0;
+    }
+    
+    /* Optimización para velocidad móvil */
+    .light-lines {
+        display: none; /* Desactivar animaciones pesadas en móvil */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: var(--text-3xl);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--text-base);
+    }
+    
+    .page-content {
+        padding: var(--space-2xl) var(--space-md);
+    }
+}
+
+/* ==========================================
+   UTILIDADES
+========================================== */
+.hidden {
+    display: none !important;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+.footer {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--glass-border);
+    padding: var(--space-xl) 0;
+    margin-top: auto;
+    position: relative;
+    z-index: 100;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 var(--space-lg);
+}
+
+.footer-text {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    transition: color var(--transition-smooth);
+}
+
+.footer-text:hover {
+    color: var(--text-primary);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer {
+        padding: var(--space-lg) 0;
+    }
+    
+    .footer-text {
+        font-size: var(--text-xs);
+    }
+}
