@@ -399,6 +399,7 @@ body {
 }
 
 .image-title {
+    margin-top: 12px;
     font-size: var(--text-lg);
     font-weight: 600;
     color: var(--text-primary);

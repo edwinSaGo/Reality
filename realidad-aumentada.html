@@ -26,7 +26,7 @@
             Inicio
         </div>
         </a>
-        <div class="nav-item" data-page="contactanos" data-color="var(--contact-yellow)">
+        <!-- <div class="nav-item" data-page="contactanos" data-color="var(--contact-yellow)">
             Contáctanos
         </div>
         <div class="nav-item" data-page="historia" data-color="var(--cyber-orange)">
@@ -37,7 +37,7 @@
         </div>
         <div class="nav-item" data-page="servicios" data-color="var(--neon-green)">
             Servicios
-        </div>
+        </div> -->
     </nav>
 
         <!-- MENÚ HAMBURGUESA MÓVIL -->
@@ -51,10 +51,12 @@
     
     <!-- MENÚ MÓVIL DESPLEGABLE -->
     <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-nav-item active" data-page="inicio" data-color="var(--electric-purple)">
+        <a href="./index.html" style="text-decoration: none;">
+            <div class="mobile-nav-item active" data-page="inicio" data-color="var(--electric-purple)">
             Inicio
         </div>
-        <div class="mobile-nav-item" data-page="contactanos" data-color="var(--contact-yellow)">
+        </a>
+        <!-- <div class="mobile-nav-item" data-page="contactanos" data-color="var(--contact-yellow)">
             Contáctanos
         </div>
         <div class="mobile-nav-item" data-page="historia" data-color="var(--cyber-orange)">
@@ -65,7 +67,7 @@
         </div>
         <div class="mobile-nav-item" data-page="servicios" data-color="var(--neon-green)">
             Servicios
-        </div>
+        </div> -->
     </div>
     
     <!-- CONTENEDOR PRINCIPAL -->
@@ -100,8 +102,7 @@
                         <div class="image-placeholder">
                             <img src="./img/img_tracking.jpg" alt="Una mujer observando la realidad aumentada de un logo en una agenda">
                         </div>
-                        <h2 class="image-title">Personaliza tus eventos con tecnología que impacta.
-</h2>
+                        <h2 class="image-title">Personaliza tus eventos con tecnología que impacta.</h2>
                         <p class="image-text"> Crea experiencias únicas y recuerdos memorables para tus clientes usando Realidad
                              Aumentada. Con esta herramienta innovadora, tu evento no solo se verá… será imposible de olvidar.</p>
                     </div>
@@ -144,7 +145,29 @@
                     </div>
                 </div>
             </div>
-        </section>    
+        </section>
+        <div class="contact-section">
+            <!-- BOTÓN WHATSAPP -->
+            <a href="https://wa.me/573173020116?text=¡Hola!%20Quiero%20transformar%20mi%20evento%20con%20Realidad%20Aumentada.%20¿Pueden%20ayudarme?" 
+                class="whatsapp-button" 
+                target="_blank">
+                Escríbenos por WhatsApp
+            </a>
+            
+            <p style="margin-top: var(--space-lg); color: var(--text-secondary); font-size: var(--text-sm);">
+                Respuesta inmediata • Asesoría gratuita • Presupuesto personalizado
+            </p>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">
+                © 2025 Reality - Colombia. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+      
     
 </body>
 </html>
