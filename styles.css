@@ -1,5 +1,5 @@
 /* ==========================================
-   VARIABLES CSS - PERSONALIZACIÓN FÁCIL
+   VARIABLES CSS - PERSONALIZACIÓN
 ========================================== */
 :root {
     /* COLORES PRINCIPALES */
@@ -566,6 +566,11 @@ body {
 @media (max-width: 480px) {
     .hero-title {
         font-size: var(--text-3xl);
+    }
+
+    .gallery-p{
+        padding: 0%;
+        border-bottom: 39px;
     }
     
     .hero-subtitle {
