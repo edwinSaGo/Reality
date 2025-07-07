@@ -15,7 +15,7 @@
     --bg-card: rgba(255, 255, 255, 0.05);
     --text-primary: #FFFFFF;
     --text-secondary: #FFFFFF;
-    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.233);
     --glass-border: rgba(255, 255, 255, 0.2);
     
     /* TIPOGRAFÍA */
@@ -348,6 +348,15 @@ body {
     text-align: center;
     margin-bottom: var(--space-2xl);
     color: var(--text-primary);
+}
+
+.gallery-p{
+    font-size: larger;
+    text-align: center;
+    padding: 39px;
+    margin-bottom: 33px;
+    color: var(--neon-green);
+    font-weight: 600;
 }
 
 .gallery-grid {
