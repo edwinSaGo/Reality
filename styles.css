@@ -491,6 +491,7 @@ body {
     font-size: var(--text-4xl);
     font-weight: 700;
     margin-bottom: var(--space-xl);
+    margin-top: var(--space-xl);
     color: var(--text-primary);
     text-align: center;
 }
