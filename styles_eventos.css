@@ -340,6 +340,7 @@ body {
     padding: var(--space-3xl) 0;
     max-width: 1200px;
     margin: 0 auto;
+   
 }
 
 .gallery-title {
@@ -358,29 +359,7 @@ body {
     padding: 0 var(--space-lg);
 }
 
-/* TARJETAS DE IMAGEN  */
-.image-card {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 16px;
-    padding: 0;
-    backdrop-filter: blur(10px);
-    transition: all var(--transition-smooth);
-    cursor: pointer;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
 
-
-
-.image-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 122, 204, 0.2);
-}
 
 /* PLACEHOLDER PARA IMÁGENES - REEMPLAZAR CON TUS IMÁGENES REALES */
 .image-card img{
@@ -397,17 +376,26 @@ body {
 }
 
 .image-placeholder img{
-    margin: 0 auto;
+    display: block;
+    margin: auto;
+    border-radius: 50% 10% 50% 10%;
+    
 }
 
 .image-title {
-    font-size: var(--text-lg);
+    font-size: large;
     font-weight: 600;
     color: var(--text-primary);
-    margin: 10px 0 10px 0;
-}
-.image-text {
     margin: 21px;
+    padding: 60px;
+}
+.image-texto-largo {
+    margin: 21px;
+    padding: 0 60px 60px 60px;
+    font-size: large;
+    color: var(--text-primary);
+    
+
 }
 
 /* ==========================================
