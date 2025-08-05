@@ -337,9 +337,10 @@ body {
    GALERÍA DE IMÁGENES AR
 ========================================== */
 .ar-gallery {
-    padding: var(--space-3xl) 0;
+    padding: 0;
     max-width: 1200px;
     margin: 0 auto;
+    width: 90%;
    
 }
 
@@ -362,23 +363,13 @@ body {
 
 
 /* PLACEHOLDER PARA IMÁGENES - REEMPLAZAR CON TUS IMÁGENES REALES */
-.image-card img{
-    
-    width: 90%;
-    border-radius: 12px 12px 0 0;
-    display: flex;
-    align-items: start;
-    justify-content: center;
-    font-size: var(--text-lg);
-    font-weight: 600;
-    margin-bottom: 0;
-    max-width: 510px;
-}
+
 
 .image-placeholder img{
     display: block;
     margin: auto;
     border-radius: 50% 10% 50% 10%;
+    width: 96%;
     
 }
 
@@ -389,6 +380,7 @@ body {
     margin: 21px;
     padding: 60px;
 }
+
 .image-texto-largo {
     margin: 21px;
     padding: 0 60px 60px 60px;
@@ -556,6 +548,19 @@ body {
         display: none; /* Desactivar animaciones pesadas en móvil */
     }
 
+    .image-texto-largo {
+        margin: 21px;
+        padding: 0;
+        font-size: large;
+        color: var(--text-primary); 
+        text-align: center;   
+
+    }
+
+    .image-title {
+        text-align: center;
+        padding: 0;
+    }
 }
 
 @media (max-width: 480px) {
