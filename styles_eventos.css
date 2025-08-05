@@ -398,6 +398,19 @@ body {
 
 }
 
+.cont_videos{
+    display: flex;
+    margin-bottom: 51px;
+    padding: 0 63px 0 63px;
+}
+
+.video{
+    margin: 33px;
+    align-content: space-around;
+    flex: 1;
+    text-align: center;
+}
+
 /* ==========================================
    BOTÓN DE CONTACTO
 ========================================== */
