@@ -1,0 +1,60 @@
+html, body { 
+  margin: 0; 
+  height: 100%; 
+  overflow: hidden; 
+}
+
+/* Contenedor del menú */
+#menu-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  text-align: center;
+}
+
+/* Botón principal */
+#menu-toggle {
+  background: #007ACC;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Contenedor de opciones */
+#menu-options {
+  margin-top: 10px;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+#menu-options button {
+  background: #444;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#menu-options button:hover {
+  background: #666;
+}
+
+/* Ocultar con la clase hidden */
+.hidden {
+  display: none !important;
+}
+
+/* Mantener la escena AR detrás */
+a-scene, canvas { 
+  z-index: 1; 
+}
