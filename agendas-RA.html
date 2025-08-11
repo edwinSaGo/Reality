@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="agendas-style.css" />
     <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v7.0.0/dist/aframe-extras.min.js"></script>
     <script src="agendas-scripts.js" defer></script>
     <title>Agendas AR</title>
   </head>
@@ -23,7 +24,7 @@
     </div>
 
     <!-- Escena AR -->
-    <a-scene mindar-image="imageTargetSrc: ./img/target.mind;"
+    <a-scene mindar-image="imageTargetSrc: ./img/targets2.mind;"
              color-space="sRGB"
              renderer="colorManagement: true, physicallyCorrectLights"
              vr-mode-ui="enabled: false"
@@ -32,11 +33,14 @@
       <a-assets>
         <img id="card" src="./img/Reality_Fondo_Muestras.png" />
         <a-asset-item id="avatarModel" src="./img/a_green_and_blue_hummingbird.glb"></a-asset-item>
+
+        <img id="card2" src="./img/Reality_Identity_track.png" />
+        <a-asset-item id="avatarModel2" src="./img/Logo_reality_def.glb"></a-asset-item>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-      <a-entity mindar-image-target="targetIndex: 0">
+      <a-entity mindar-image-target="targetIndex: 1">
         <a-plane src="#card" position="0 1.2 0" height="0.552" width="1"
                  rotation="90 0 0" scale="1.5 1.5 1.5"></a-plane>
 
@@ -45,6 +49,17 @@
                       animation="property: position; to: 0 0.1 0.1; dur: 1000;
                                  easing: easeInOutQuad; loop: true; dir: alternate">
         </a-gltf-model>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 0">
+        <a-plane src="#card2" position="0 0 0" height="0.552" width="1" 
+                  rotation="0 0 0"></a-plane>
+
+        <a-gltf-model rotation="90 0 0 " position="0 0 0.1" scale="0.08 0.08 0.08" 
+                      src="#avatarModel2" 
+                      animation="property: position; to: 0 0.1 0.1; dur: 1000; 
+                      easing: easeInOutQuad; loop: true; dir: alternate">
+        </a-gltf-model>
+
       </a-entity>
     </a-scene>
   </body>
