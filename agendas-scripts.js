@@ -16,11 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
           window.location.href = './index.html';
           break;
         case 'tarjetas':
-          window.location.href = './tarjetas-AR.html';
+          window.location.href = './tarjetas.html';
           break;
         case 'salon':
-          window.location.href = './salon-AR.html';
+          window.location.href = './salon.html';
           break;
+        case 'agendas':
+          window.location.href = './agendas.html'
       }
       // Ocultar el menú después de elegir
       menuOptions.classList.add('hidden');
