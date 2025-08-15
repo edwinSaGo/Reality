@@ -4,18 +4,24 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="agendas-style.css" />
-    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v7.0.0/dist/aframe-extras.min.js"></script>
+    <title>Showroom Reality Studio</title>
+
+    <!-- Librerías locales -->
+    <script src="./js/aframe.min.js"></script>
+    <script src="./js/mindar-image-aframe.prod.js"></script>
+    <script src="./js/aframe-extras.min.js"></script>
     <script src="agendas-scripts.js" defer></script>
-    <title>Showroom</title>
   </head>
   <body>
 
-    <!-- Menú flotante -->
+    <!-- Loader con porcentaje -->
+    <div id="loader">
+      <div id="loader-text">Cargando experiencia... 0%</div>
+    </div>
+
+    <!-- Menú flotante (manteniendo tu estilo y funcionalidad) -->
     <div id="menu-container">
       <button id="menu-toggle">☰ Menú</button>
-      <!-- Agrego la clase hidden para que empiece oculto -->
       <div id="menu-options" class="hidden">
         <button data-action="inicio">🏠 Inicio</button>
         <button data-action="tarjetas">💳 Tarjetas</button>
@@ -31,48 +37,36 @@
              vr-mode-ui="enabled: false"
              device-orientation-permission-ui="enabled: false">
 
-      <a-assets>
+      <a-assets timeout="10000" id="assetLoader">
+        <!-- Imágenes -->
         <img id="card" src="./img/Reality_Fondo_Muestras.png" />
-        <a-asset-item id="avatarModel" src="./img/a_green_and_blue_hummingbird.glb"></a-asset-item>
-
         <img id="card2" src="./img/Reality_Identity_track.png" />
-        <a-asset-item id="avatarModel2" src="./img/Logo_reality_def.glb"></a-asset-item>
-
         <img id="card3" src="./img/Reality_Target_Suelo.png" />
-        <a-asset-item id="avatarModel3" src="./img/fairy_girl_on_a_mushroom.glb"></a-asset-item>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
+      <!-- Target 1 -->
       <a-entity mindar-image-target="targetIndex: 1">
         <a-plane src="#card" position="0 1.2 0" height="0.552" width="1"
                  rotation="90 0 0" scale="1.5 1.5 1.5"></a-plane>
-
-        <a-gltf-model rotation="90 90 90" position="0 0 0.1" scale="0.7 0.7 0.7"
-                      src="#avatarModel"
-                      animation="property: position; to: 0 0.1 0.1; dur: 1000;
-                                 easing: easeInOutQuad; loop: true; dir: alternate">
-        </a-gltf-model>
+        <a-gltf-model id="model1" rotation="90 90 90" position="0 0 0.1"
+                      scale="0.7 0.7 0.7"></a-gltf-model>
       </a-entity>
+
+      <!-- Target 2 -->
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-plane src="#card3" position="0 0 0" height="1" width="1" 
-                  rotation="0 0 0"></a-plane>
-
-        <a-gltf-model rotation="90 0 0 " position="0 0 3" scale="60 60 60" 
-                      src="#avatarModel3">
-        </a-gltf-model>
-
+        <a-plane src="#card3" position="0 0 0" height="1" width="1" rotation="0 0 0"></a-plane>
+        <a-gltf-model id="model2" rotation="90 0 0" position="0 0 3" scale="60 60 60"></a-gltf-model>
       </a-entity>
+
+      <!-- Target 3 -->
       <a-entity mindar-image-target="targetIndex: 2">
-        <a-plane src="#card2" position="0 0 0" height="0.552" width="1" 
-                  rotation="0 0 0"></a-plane>
-        <a-gltf-model rotation="90 0 0 " position="0 0 0.1" scale="0.08 0.08 0.08" 
-                      src="#avatarModel2" 
-                      animation="property: position; to: 0 0.1 0.1; dur: 1000; 
-                      easing: easeInOutQuad; loop: true; dir: alternate">
-        </a-gltf-model>
-        
+        <a-plane src="#card2" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
+        <a-gltf-model id="model3" rotation="90 0 0" position="0 0 0.1"
+                      scale="0.08 0.08 0.08"></a-gltf-model>
       </a-entity>
+
     </a-scene>
   </body>
 </html>
