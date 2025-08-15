@@ -25,6 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
         case 'agendas':
           window.location.href = './agendas.html';
           break;
+        case 'showroom':
+          window.location.href = './showroom.html';
+          break;
       }
       menuOptions.classList.add('hidden');
     });
