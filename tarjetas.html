@@ -31,11 +31,14 @@
     </div>
 
     <!-- Escena AR -->
-    <a-scene mindar-image="imageTargetSrc: ./img/targets-3.mind;"
-             color-space="sRGB"
-             renderer="colorManagement: true, physicallyCorrectLights"
-             vr-mode-ui="enabled: false"
-             device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-image="imageTargetSrc: ./img/targets-3.mind; 
+                       filterMinCF: 0.0001; 
+                       filterBeta: 0.01; 
+                       missTolerance: 5"
+         color-space="sRGB"
+         renderer="colorManagement: true, physicallyCorrectLights"
+         vr-mode-ui="enabled: false"
+         device-orientation-permission-ui="enabled: false">
 
       <a-assets>
 
@@ -48,12 +51,12 @@
 
 
       <a-entity mindar-image-target="targetIndex: 2" animation-mixer="timeScale: 3">
-        <a-plane src="#card2" position="0 0 0" height="0.001" width="0.001" 
+        <a-plane src="#card2" position="0 0 0" height="0.0001" width="0.0001" 
                   rotation="0 0 0" ></a-plane>
-        <a-gltf-model rotation="90 0 0 " position="0 0 0.1" scale="0.15 0.15 0.15" 
+        <a-gltf-model rotation="0 0 0 " position="0 -0.2 0.5" scale="0.15 0.15 0.15" 
                       src="#avatarModel2" 
-                      animation="property: position; to: 0 0.1 0.1; dur: 1000; 
-                      easing: easeInOutQuad; loop: true; dir: alternate">
+                       animation="property: position; to: 0 0.1 0.5; dur: 1000; 
+                      easing: easeInOutQuad; loop: true; dir: alternate"> 
         </a-gltf-model>
         
       </a-entity>
