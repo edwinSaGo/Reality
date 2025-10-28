@@ -1,172 +1,341 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles_industria.css">
-    <link rel="icon" type="image/x-icon" href="./img/Logo Reality Favicon.png">
-    <script src="ar-events.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- ANIME.JS CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <title>Reality Studio - Industria</title>
+  <link rel="stylesheet" href="styles_industria.css">
+  <link rel="icon" type="image/x-icon" href="./img/Logo Reality Favicon.png">
 
-    <title>Reality Studio - Industria</title>
+  <!-- JS -->
+  <script src="ar-events.js"></script>
+
+  <!-- ANIME.JS CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
+
+
 <body>
-    <!-- FONDO DINÁMICO -->
-    <div class="dynamic-background"></div>
-    
-    <!-- LÍNEAS DE LUZ ANIMADAS -->
-    <div class="light-lines" id="lightLines"></div>
 
-    <!-- NAVEGACIÓN DESKTOP (FIJA IZQUIERDA) -->
-    <nav class="navigation" id="desktopNav">
-        <a href="./index.html" style="text-decoration: none;">
-            <div class="nav-item active" data-page="inicio" data-color="var(--electric-purple)">
-            Inicio
-        </div>
-        </a>
-        <!-- <div class="nav-item" data-page="contactanos" data-color="var(--contact-yellow)">
-            Contáctanos
-        </div>
-        <div class="nav-item" data-page="historia" data-color="var(--cyber-orange)">
-            Historia
-        </div>
-        <div class="nav-item" data-page="descubre-ar" data-color="var(--tech-pink)">
-            Descubre AR
-        </div>
-        <div class="nav-item" data-page="servicios" data-color="var(--neon-green)">
-            Servicios
-        </div> -->
-    </nav>
+  <!-- FONDO DINÁMICO -->
+  <div class="dynamic-background"></div>
 
-        <!-- MENÚ HAMBURGUESA MÓVIL -->
-    <div class="mobile-menu-toggle" id="mobileMenuToggle">
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+  <!-- LÍNEAS DE LUZ ANIMADAS -->
+  <div class="light-lines" id="lightLines"></div>
+
+
+  <!-- NAVEGACIÓN DESKTOP (FIJA IZQUIERDA) -->
+  <nav class="navigation" id="desktopNav">
+    <a href="./index.html" style="text-decoration: none;">
+      <div class="nav-item active" data-page="inicio" data-color="var(--electric-purple)">Inicio</div>
+    </a>
+  </nav>
+
+
+  <!-- MENÚ HAMBURGUESA MÓVIL -->
+  <div class="mobile-menu-toggle" id="mobileMenuToggle">
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-    
-    <!-- MENÚ MÓVIL DESPLEGABLE -->
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="./index.html" style="text-decoration: none;">
-            <div class="mobile-nav-item active" data-page="inicio" data-color="var(--electric-purple)">
-            Inicio
+  </div>
+
+  <!-- MENÚ MÓVIL DESPLEGABLE -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="./index.html" style="text-decoration: none;">
+      <div class="mobile-nav-item active" data-page="inicio" data-color="var(--electric-purple)">Inicio</div>
+    </a>
+  </div>
+
+
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <main class="main-container">
+
+    <!-- SECCIÓN HERO -->
+    <section class="page_active" id="inicio">
+
+      <div class="hero-section">
+
+        <!-- LOGO -->
+        <div class="logo">
+          <img src="./img/logo_reality_fondo_blanco.png" alt="Logo de Reality Studio">
         </div>
-        </a>
-        <!-- <div class="mobile-nav-item" data-page="contactanos" data-color="var(--contact-yellow)">
-            Contáctanos
+
+        <h1 class="hero-title">Transforma tu producto o quédate atrás</h1>
+
+        <p class="hero-subtitle">
+          9 de cada 10 personas jamás olvidan un evento con Realidad Aumentada.
+        </p>
+
+        <p class="hero-subtitle">
+          ¿Quieres más conexión, más recordación y más impacto?
+        </p>
+
+        <div class="scroll-indicator">↓ Desliza para descubrir más</div>
+      </div>
+
+
+
+      <!-- GALERÍA DE IMÁGENES AR -->
+      <div class="ar-gallery">
+
+        <h2 class="gallery-title">Realidad Aumentada en la Industria</h2>
+
+        <!-- TARJETA -->
+        <div class="image-placeholder">
+          <img src="./img/ninios_portada.jpg" alt="niños observando una caja de cereal interactiva con Realidad Aumentada">
         </div>
-        <div class="mobile-nav-item" data-page="historia" data-color="var(--cyber-orange)">
-            Historia
-        </div>
-        <div class="mobile-nav-item" data-page="descubre-ar" data-color="var(--tech-pink)">
-            Descubre AR
-        </div>
-        <div class="mobile-nav-item" data-page="servicios" data-color="var(--neon-green)">
-            Servicios
-        </div> -->
+
+        <h2 class="image-title">
+          La Realidad Aumentada ya no es una moda. Es la nueva ley del mercado.
+        </h2>
+
+        <p class="image-texto-largo">
+          Si tu marca no ofrece experiencias memorables, alguien más lo hará por ti.
+          La RA convierte empaques, tarjetas y avisos en encuentros vivos: compradores
+          que miraban pasan a interactuar, recordar y comprar.
+          ¿Quieres ser la marca que la gente comparte en sus historias o la que nadie menciona?
+        </p>
+
+
+        <!-- SECCIÓN INDUSTRIA (SCHEMA.ORG OPTIMIZADO PARA SEO) -->
+        <section id="industria" class="industria-section" itemscope itemtype="https://schema.org/Article">
+
+          <meta itemprop="articleSection" content="Industria">
+          <meta itemprop="about" content="Realidad Aumentada en empaques, tarjetas comerciales y publicidad">
+          <meta itemprop="keywords"
+            content="realidad aumentada, packaging interactivo, tarjetas AR, publicidad RA, empaques inteligentes, marketing inmersivo, BTL, PLV, innovación empresarial">
+
+          <!-- HEADER -->
+          <header>
+            <h1 itemprop="headline">¿Por qué implementar Realidad Aumentada en tu industria?</h1>
+            <p itemprop="description">
+              Descubre cómo la Realidad Aumentada transforma empaques, tarjetas y avisos
+              en experiencias vivas que detienen la mirada, generan recuerdo y convierten curiosos en clientes.
+            </p>
+          </header>
+
+
+          <!-- BENEFICIOS -->
+          <article itemprop="articleBody">
+
+            <section itemprop="mainEntity" itemscope itemtype="https://schema.org/ItemList">
+              <meta itemprop="name" content="Beneficios de la Realidad Aumentada en la industria">
+              <h2>Beneficios principales</h2>
+
+              <ul>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                  <meta itemprop="position" content="1">
+                  <span itemprop="name">
+                    <strong>Vende emociones, no solo productos:</strong>
+                    Un envase que cuenta la historia del producto en 3D o enseña cómo usarlo, convierte curiosos en clientes.
+                  </span>
+                </li>
+
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                  <meta itemprop="position" content="2">
+                  <span itemprop="name">
+                    <strong>Diferenciación inmediata:</strong>
+                    En un estante lleno de opciones, la experiencia AR es el factor que detiene la mirada y acelera la decisión de compra.
+                  </span>
+                </li>
+
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                  <meta itemprop="position" content="3">
+                  <span itemprop="name">
+                    <strong>Mayor recuerdo de marca:</strong>
+                    Las experiencias interactivas se recuerdan mejor: más engagement = más recomendación digital.
+                  </span>
+                </li>
+
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                  <meta itemprop="position" content="4">
+                  <span itemprop="name">
+                    <strong>Menos devoluciones:</strong>
+                    Mostrar el producto en contexto (tamaño, instrucciones, prueba virtual) reduce dudas.
+                  </span>
+                </li>
+
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                  <meta itemprop="position" content="5">
+                  <span itemprop="name">
+                    <strong>Trazabilidad y confianza:</strong>
+                    Certificaciones, origen y producción visibles con AR generan transparencia.
+                  </span>
+                </li>
+
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                  <meta itemprop="position" content="6">
+                  <span itemprop="name">
+                    <strong>Tarjetas personales con vida:</strong>
+                    Un contacto se convierte en conversación real con videos, portafolios y llamadas a la acción interactivas.
+                  </span>
+                </li>
+
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                  <meta itemprop="position" content="7">
+                  <span itemprop="name">
+                    <strong>Publicidad que impacta:</strong>
+                    Avisos y displays con RA capturan la atención y la convierten en acción.
+                  </span>
+                </li>
+              </ul>
+            </section>
+
+
+            <!-- CASOS DE USO -->
+            <section itemprop="mainEntity" itemscope itemtype="https://schema.org/ItemList">
+              <meta itemprop="name" content="Casos que impactan resultados">
+              <h2>Casos que impactan tu resultado final</h2>
+
+              <ul>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                  <meta itemprop="position" content="1">
+                  <span itemprop="name">
+                    <strong>Packaging interactivo:</strong>
+                    Promociones, manuales 3D, recetas y juegos activados desde el teléfono que aumentan interacción y ventas.
+                  </span>
+                </li>
+
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                  <meta itemprop="position" content="2">
+                  <span itemprop="name">
+                    <strong>Cartas y material BTL:</strong>
+                    Dejan una impresión imborrable y facilitan seguimiento posterior.
+                  </span>
+                </li>
+
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                  <meta itemprop="position" content="3">
+                  <span itemprop="name">
+                    <strong>Campañas publicitarias y PLV:</strong>
+                    Convierten el punto de venta en un escenario activo y memorable.
+                  </span>
+                </li>
+              </ul>
+            </section>
+
+
+            <!-- RIESGOS DE NO ADOPTAR RA -->
+            <section itemprop="mainEntity" itemscope itemtype="https://schema.org/ItemList">
+              <meta itemprop="name" content="Riesgos de no adoptar la RA">
+              <h2>¿Qué pierdes si no actúas?</h2>
+
+              <p>Las marcas que ignoran la experiencia aumentada corren el riesgo de:</p>
+
+              <ul>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                  <meta itemprop="position" content="1">
+                  <span itemprop="name">Perder relevancia frente a competidores ágiles.</span>
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                  <meta itemprop="position" content="2">
+                  <span itemprop="name">Reducir su tasa de conversión en canales físicos y digitales.</span>
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                  <meta itemprop="position" content="3">
+                  <span itemprop="name">Ser percibidas como “anticuadas” por consumidores innovadores.</span>
+                </li>
+              </ul>
+
+              <p>En mercados saturados, la indiferencia equivale a desaparecer de la mente del comprador.</p>
+            </section>
+
+
+            <!-- CÓMO EMPEZAR -->
+            <section itemprop="mainEntity" itemscope itemtype="https://schema.org/ItemList">
+              <meta itemprop="name" content="Cómo empezar con Realidad Aumentada">
+              <h2>¿Cómo empezamos?</h2>
+
+              <ol>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                  <meta itemprop="position" content="1">
+                  <span itemprop="name"><strong>Diagnóstico rápido:</strong> Identificamos dónde la RA genera mayor impacto (empaque, tarjeta, evento).</span>
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                  <meta itemprop="position" content="2">
+                  <span itemprop="name"><strong>Prototipo en 7 días:</strong> Una demo funcional para mostrar a clientes o redes.</span>
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                  <meta itemprop="position" content="3">
+                  <span itemprop="name"><strong>Pilotaje y métricas:</strong> Medimos engagement, intención de compra y retorno.</span>
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                  <meta itemprop="position" content="4">
+                  <span itemprop="name"><strong>Escala:</strong> Integramos la solución en tu línea de producción y campañas.</span>
+                </li>
+              </ol>
+
+              <p><strong>No es ciencia ficción.</strong> Es estrategia comercial con métricas reales.
+                Te ayudamos a poner la Realidad Aumentada en el corazón de tu producto y comunicación.</p>
+
+              <!-- BOTÓN WHATSAPP -->
+              <div class="contact-section">
+                <a href="https://wa.me/573173020116?text=¡Hola!%20Quiero%20transformar%20mi%20evento%20con%20Realidad%20Aumentada.%20¿Pueden%20ayudarme?"
+                  class="whatsapp-button" target="_blank">
+                  Escríbenos por WhatsApp
+                </a>
+
+                <p style="margin-top: var(--space-lg); color: var(--text-secondary); font-size: var(--text-sm);">
+                  Respuesta inmediata • Asesoría gratuita • Presupuesto personalizado
+                </p>
+              </div>
+            </section>
+
+          </article>
+
+          <!-- FOOTER SEO -->
+          <footer>
+            <meta itemprop="author" content="Reality Studio">
+            <meta itemprop="publisher" content="Reality Studio">
+            <meta itemprop="inLanguage" content="es-CO">
+            <meta itemprop="dateModified" content="2025-10-28">
+          </footer>
+
+        </section> <!-- /industria -->
+      </div>
+    </section>
+
+
+
+    <!-- VIDEOS -->
+    <section class="video-container">
+      <div class="video">
+        <iframe width="315" height="560"
+          src="https://youtube.com/embed/L8_wddOE3nU?si=QeQIGwmki1BEvVgL"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="video">
+        <iframe width="315" height="560"
+          src="https://youtube.com/embed/mhWeVLz8Smw?feature=share"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+  </main>
+
+
+
+  <!-- FOOTER GENERAL -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="footer-text">
+        © 2025 Reality - Colombia. Todos los derechos reservados.
+      </p>
     </div>
-    
-    <!-- CONTENEDOR PRINCIPAL -->
-    <main class="main-container">
+  </footer>
 
-            <section class="page_active" id="inicio">
-                <div class="hero-section">
-                    <!-- LOGO CENTRADO -->
-                    <div class="logo">
-                        <img src="./img/logo_reality_fondo_blanco.png" alt="Logo de reality">
-                    </div>
-                    
-                    <h1 class="hero-title">
-                        Sorprende a tus clientes con Realidad Aumentda
-                    </h1>
-                    
-                    <p class="hero-subtitle">
-                        9 de cada 10 personas jamás olvidan un evento con Realidad Aumentada. 
-                    </p>
-                    <p class="hero-subtitle">
-                        ¿Quieres más conexión, más recordación y más impacto? 
-                    </p>
-                    
-                    <div class="scroll-indicator">
-                        ↓ Desliza para descubrir más
-                    </div>
-                </div>
-            
-            <!-- GALERÍA DE IMÁGENES AR -->
-            <div class="ar-gallery">
-                <h2 class="gallery-title">Realidad Aumentada para Eventos</h2>
-                
-                    
-                    
-                    <!-- TARJETA  -->
-                        <div class="image-placeholder">
-                            <img src="./img/Img_colibri.png" alt="un grupo de personas viendo un colibri en realidad aumentada en una exposición">
-                        </div>
-                        <h3 class="image-title">Haz que cada asistente recuerde tu evento… incluso años después.</h3>
-                        
-                        <p class="image-texto-largo">Imagina que, al escanear una simple etiqueta, una invitación o un souvenir, aparece frente a tus ojos una animación mágica, un mensaje personalizado o el alma misma de tu marca. Eso no es futuro: eso es ahora.
-                                Eso es Realidad Aumentada para eventos.
-
-                                En un mundo saturado de estímulos, tu evento no puede ser solo “otro evento”. Tiene que quedar grabado. La RA convierte cada elemento físico —una tarjeta, una libreta, una camiseta— en una experiencia interactiva que despierta emociones, sorpresa, y sobre todo: recordación.
-
-                                Desde un pequeño logo con RA que cobra vida en las credenciales de tus invitados, hasta decoraciones que cuentan historias o juegos interactivos que capturan datos en tiempo real, Reality Studio te ayuda a conectar con tu público de una forma completamente nueva.
-
-                                Y lo mejor: no necesitas pantallas gigantes ni gafas especiales.
-                                Solo un celular, y la magia empieza.
-
-                                ¿Quieres que tu evento se quede en la memoria de todos?
-                                Hazlo inolvidable con Realidad Aumentada.</p>
-                    
-                
-            </div>
-        </section>
-         <!-- Videos -->
-        <section class="video-container">
-            <div class="video">
-                <iframe width="315" height="560" 
-                src="https://youtube.com/embed/L8_wddOE3nU?si=QeQIGwmki1BEvVgL" 
-                title="YouTube video player" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-            </div>
-             <div class="video">
-                <iframe width="315" height="560" 
-                src="https://youtube.com/embed/mhWeVLz8Smw?feature=share" 
-                title="YouTube video player" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-            </div>
-
-
-        </section>
-        <div class="contact-section">
-            <!-- BOTÓN WHATSAPP -->
-            <a href="https://wa.me/573173020116?text=¡Hola!%20Quiero%20transformar%20mi%20evento%20con%20Realidad%20Aumentada.%20¿Pueden%20ayudarme?" 
-                class="whatsapp-button" 
-                target="_blank">
-                Escríbenos por WhatsApp
-            </a>
-            
-            <p style="margin-top: var(--space-lg); color: var(--text-secondary); font-size: var(--text-sm);">
-                Respuesta inmediata • Asesoría gratuita • Presupuesto personalizado
-            </p>
-        </div>
-    </main>
-    
-    <footer class="footer">
-        <div class="footer-content">
-            <p class="footer-text">
-                © 2025 Reality - Colombia. Todos los derechos reservados.
-            </p>
-        </div>
-    </footer>
-      
-    
 </body>
+
 </html>
