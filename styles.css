@@ -390,6 +390,80 @@ body {
     box-shadow: 0 20px 40px rgba(0, 122, 204, 0.2);
 }
 
+/* PLACEHOLDER PARA IMÁGENES  */
+.image-card img{
+    
+    height: 150px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-lg);
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.image-placeholder img{
+    margin: 0 auto;
+}
+
+.image-title {
+    margin-top: 12px;
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+
+/* ==========================================
+   Galería de PORTAFOLIO
+========================================== */
+.portafolio-gallery {
+    padding: var(--space-3xl) 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-portafolio-p{
+    font-size: larger;
+    text-align: center;
+    padding: 39px;
+    margin-bottom: 33px;
+    color: var(--neon-green);
+    font-weight: 600;
+}
+
+.gallery-grid-portafolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+    padding: 0 var(--space-lg);
+}
+
+/* TARJETAS DE IMAGEN - PERSONALIZAR AQUÍ TUS IMÁGENES */
+.image-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 0;
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-smooth);
+    cursor: pointer;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.image-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 122, 204, 0.2);
+}
+
 /* PLACEHOLDER PARA IMÁGENES - REEMPLAZAR CON TUS IMÁGENES REALES */
 .image-card img{
     
