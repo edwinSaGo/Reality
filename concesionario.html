@@ -9,6 +9,25 @@
     <script src="./js/aframe-extras.min.js"></script>
     <script src="agendas-scripts.js" defer></script>
     <title>Concesionario</title>
+
+
+        <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1671068297631978');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1671068297631978&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
   </head>
   <body>
     <!-- Menú flotante -->
@@ -54,7 +73,7 @@
           animation="property: rotation;
                  to: 0 0 360;
                  loop: true;
-                 dur: 10000;
+                 dur: 15000;
                  easing: linear;">
                  <a-entity>
                       <a-gltf-model rotation="90 0 0" position="0 -0.1 0.4" scale="0.4 0.4 0.4"
@@ -69,6 +88,14 @@
       </a-entity>
       
     </a-scene>
-    
+    <div style="position: fixed; bottom: 0; width: 100%; background: rgba(0,0,0,0.7); 
+color: white; padding: 10px; font-size: 14px; text-align: center; z-index: 9999;">
+  Este sitio utiliza cookies y herramientas como Meta Pixel para análisis y mejora de experiencia. 
+  Al continuar navegando aceptas su uso.
+  <button onclick="this.parentElement.style.display='none'" 
+  style="margin-left: 10px; padding: 5px 10px; border: none; background: #ffffff; color: #000;">
+    Ok
+  </button>
+</div>
   </body>
 </html>
